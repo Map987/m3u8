@@ -21,6 +21,25 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
+
+      - name: ffmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v3
+        id: setup-ffmpeg
+        with:
+         ffmpeg-version: release
+      # Target architecture of the
+         ffmpeg-path: videos/
+         architecture: ''
+      # Linking type of the binaries. Use "shared" to download shared binaries and 
+      # "static" for statically linked ones. Shared builds are currently only available
+      # for windows releases. Defaults to "static"
+         linking-type: static
+      # As of version 3 of this action, builds are no longer downloaded from GitHub
+      # except on Windows: https://github.com/GyanD/codexffmpeg/releases.
+         github-token: ${{ github.server_url == 'https://github.com' && github.token || '' }}
+      
+      # A specific version to download, may also be "release" or a specific version
+      # like "6.1.0".
       - name: Install requirements
         run: |
           python3 -m pip install --upgrade pip
