@@ -6,7 +6,8 @@ import argparse
 cm = """
 mkdir videos/
 ls
-echo "okkk"
+echo "ffmpeg测试："
+ffmpeg
 echo $PATH
 mkdir /usr/local/bin/videos
 echo $PATH
