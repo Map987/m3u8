@@ -5,6 +5,11 @@ import argparse
 # Splitting the provided command string into individual commands
 cm = """
 mkdir videos/
+ls
+echo "okkk"
+echo $PATH
+mkdir /home/runner/work/m3u8/m3u8/videos
+echo $PATH
 wget https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.2.1-beta/N_m3u8DL-RE_Beta_linux-x64_20240828.tar.gz
 tar -xvf N_m3u8DL-RE_Beta_linux-x64_20240828.tar.gz
 chmod 777 N_m3u8DL-RE_Beta_linux-x64/N_m3u8DL-RE
