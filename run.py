@@ -1,6 +1,6 @@
 import os
 import subprocess
-
+import argparse
 # 定义要执行的bash命令
 # Splitting the provided command string into individual commands
 cm = """
@@ -8,7 +8,8 @@ mkdir videos/
 wget https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.2.1-beta/N_m3u8DL-RE_Beta_linux-x64_20240828.tar.gz
 tar -xvf N_m3u8DL-RE_Beta_linux-x64_20240828.tar.gz
 chmod 777 N_m3u8DL-RE_Beta_linux-x64/N_m3u8DL-RE
-N_m3u8DL-RE_Beta_linux-x64/N_m3u8DL-RE https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8 --auto-select TRUE --save-dir videos/ --log-level OFF --thread-count 4
+N_m3u8DL-RE_Beta_linux-x64/N_m3u8DL-RE "【中文口譯直播】2024亞洲新媒體高峰會_11／12.m3u8" --auto-select TRUE --save-dir videos/ --log-level OFF --thread-count 16
+N_m3u8DL-RE_Beta_linux-x64/N_m3u8DL-RE "【原聲原影版】2024亞洲新媒體高峰會_11／12 (1).m3u8" --auto-select TRUE --save-dir videos/ --log-level OFF --thread-count 16
 """
 
 # Splitting the string into a list of commands
